@@ -463,6 +463,12 @@
       document.getElementById('lightboxModal').hidden = true;
       document.body.style.overflow = '';
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !document.getElementById('lightboxModal').hidden) {
+        closeLightbox();
+      }
+    });
   </script>
   <script src="js/main.js"></script>
 </body>
