@@ -1,0 +1,18 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/services/showers", "destination": "/service-showers.html" },
+    { "source": "/services/bathrooms", "destination": "/service-bathrooms.html" },
+    { "source": "/services/kitchens", "destination": "/service-kitchens.html" },
+    { "source": "/services/flooring", "destination": "/service-flooring.html" },
+    { "source": "/services/marble", "destination": "/service-marble.html" },
+    { "source": "/services/commercial", "destination": "/service-commercial.html" },
+    { "source": "/about-us", "destination": "/about.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/blog", "destination": "/blog.html" }
+  ]
+}
