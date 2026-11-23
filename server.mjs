@@ -35,7 +35,16 @@ const URL_REWRITES = {
   '/services/kitchens': '/service-kitchens.html',
   '/services/flooring': '/service-flooring.html',
   '/services/marble': '/service-marble.html',
-  '/services/commercial': '/service-commercial.html'
+  '/services/commercial': '/service-commercial.html',
+  '/areas/tampa': '/area-tampa.html',
+  '/areas/st-petersburg': '/area-st-petersburg.html',
+  '/areas/clearwater': '/area-clearwater.html',
+  '/areas/brandon': '/area-brandon.html',
+  '/areas/riverview': '/area-riverview.html',
+  '/areas/westchase': '/area-westchase.html',
+  '/areas/carrollwood': '/area-carrollwood.html',
+  '/areas/wesley-chapel': '/area-wesley-chapel.html',
+  '/areas/south-tampa': '/area-south-tampa.html'
 };
 
 const server = http.createServer((req, res) => {

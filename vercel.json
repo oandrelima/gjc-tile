@@ -16,6 +16,15 @@
     { "source": "/services", "destination": "/services.html" },
     { "source": "/gallery", "destination": "/gallery.html" },
     { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/blog", "destination": "/blog.html" }
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/areas/tampa", "destination": "/area-tampa.html" },
+    { "source": "/areas/st-petersburg", "destination": "/area-st-petersburg.html" },
+    { "source": "/areas/clearwater", "destination": "/area-clearwater.html" },
+    { "source": "/areas/brandon", "destination": "/area-brandon.html" },
+    { "source": "/areas/riverview", "destination": "/area-riverview.html" },
+    { "source": "/areas/westchase", "destination": "/area-westchase.html" },
+    { "source": "/areas/carrollwood", "destination": "/area-carrollwood.html" },
+    { "source": "/areas/wesley-chapel", "destination": "/area-wesley-chapel.html" },
+    { "source": "/areas/south-tampa", "destination": "/area-south-tampa.html" }
   ]
 }

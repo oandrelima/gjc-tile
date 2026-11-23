@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gjc-tile.vercel.app/sitemap.xml
