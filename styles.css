@@ -45,7 +45,7 @@ a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
-.container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+.container { width: min(1440px, calc(100% - 36px)); margin-inline: auto; }
 .section { padding: 95px 0; }
 
 /* Header & Navigation (Crisp Modern Glass) */
@@ -441,6 +441,261 @@ h1 em, h2 em {
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.7;
+}
+
+/* VolpeRenovation-Style Service Components */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--white);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  overflow: hidden;
+}
+.service-card:hover {
+  z-index: 2;
+  transform: translateY(-5px);
+  background: #ffffff;
+  box-shadow: var(--shadow-lg);
+}
+.service-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+.service-card--featured .service-card__media {
+  aspect-ratio: auto;
+  min-height: 330px;
+}
+.service-card--featured .service-card__body {
+  justify-content: center;
+  padding: 36px 40px;
+}
+.service-card--featured:hover {
+  background: var(--ink-deep);
+}
+.service-card__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--ink-deep);
+}
+.service-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+  display: block;
+}
+.service-card:hover .service-card__media img {
+  transform: scale(1.04);
+}
+.service-card__number {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: rgba(14, 21, 36, 0.82);
+  color: #8bb2cf;
+  font-size: 0.72rem;
+  font-weight: 750;
+  backdrop-filter: blur(6px);
+}
+.service-card__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 26px 28px;
+}
+.service-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: var(--mint);
+  color: var(--coral-dark);
+}
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.service-card--featured .service-icon {
+  background: rgba(78, 115, 140, 0.25);
+  color: #8bb2cf;
+}
+.service-card__tag {
+  display: inline-block;
+  margin: -4px 0 8px;
+  color: var(--coral);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.service-card--featured .service-card__tag {
+  color: #8bb2cf;
+}
+.service-card h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.4rem;
+  font-weight: 750;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.service-card--featured h3 {
+  color: var(--white);
+  font-size: 1.75rem;
+}
+.service-card p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  flex: 1;
+}
+.service-card--featured p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.96rem;
+}
+.service-card__cta {
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 750;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+}
+.service-card--featured .service-card__cta {
+  color: #8bb2cf;
+}
+.service-card__cta span {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.2s;
+}
+.service-card:hover .service-card__cta span {
+  transform: translateX(4px);
+}
+.services__note {
+  margin: 30px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.services__note a {
+  color: var(--ink);
+  font-weight: 700;
+  border-bottom: 1px solid var(--coral);
+}
+
+/* Services Page Alternating Showcase Rows (VolpeRenovation Style) */
+.showcase-list {
+  display: grid;
+  gap: 72px;
+}
+.showcase-row {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 56px;
+}
+.showcase-row--reverse .showcase-row__media {
+  order: 2;
+}
+.showcase-row__media {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 16 / 10;
+  background: var(--ink-deep);
+}
+.showcase-row__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.showcase-row__badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 6px 14px;
+  border-radius: 99px;
+  background: rgba(14, 21, 36, 0.85);
+  color: #8bb2cf;
+  font-size: 0.76rem;
+  font-weight: 800;
+  backdrop-filter: blur(6px);
+}
+.showcase-row__content h2 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1.1;
+}
+.showcase-row__content > p {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.showcase-row__list {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+.showcase-row__list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.showcase-row__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--coral);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+}
+.showcase-row__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+}
+.showcase-row__actions .text-link {
+  color: var(--ink);
+  font-size: 0.9rem;
 }
 
 /* Redesigned Architectural Services Section */
@@ -1627,7 +1882,10 @@ h1 em, h2 em {
   .process-line { display: none; }
   .quote__grid, .faq__grid { grid-template-columns: 1fr; gap: 45px; }
   .quote__copy, .faq__intro { position: static; }
-  .inner-hero__grid, .inner-grid { grid-template-columns: 1fr; gap: 40px; }
+  .inner-hero__grid, .inner-grid, .showcase-row { grid-template-columns: 1fr; gap: 32px; }
+  .showcase-row--reverse .showcase-row__media { order: 0; }
+  .service-grid { grid-template-columns: 1fr 1fr; }
+  .service-card--featured { grid-template-columns: 1fr; }
   .inner-hero { padding: 70px 0; }
   .inner-hero__stats { grid-template-columns: repeat(2, 1fr); gap: 18px 24px; }
   .side-quote { position: static; }
@@ -1636,7 +1894,7 @@ h1 em, h2 em {
 
 @media (max-width: 560px) {
   body { padding-bottom: 64px; }
-  .container { width: min(100% - 28px, 500px); }
+  .container { width: min(100% - 24px, 540px); }
   .section { padding: 60px 0; }
   .brand__logo { height: 40px; }
   .hero, .hero__inner { min-height: auto; }
@@ -1650,7 +1908,7 @@ h1 em, h2 em {
   .hero__proof { justify-content: space-between; }
   .hero__proof li { padding: 0 8px; }
   .section-heading h2, .difference h2, .quote h2, .faq h2 { font-size: 2.3rem; }
-  .services-showcase-grid { grid-template-columns: 1fr; }
+  .services-showcase-grid, .service-grid, .showcase-row__list { grid-template-columns: 1fr; }
   .gallery-cards { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
   .craftsmanship-card__floating-list { grid-template-columns: 1fr; }
