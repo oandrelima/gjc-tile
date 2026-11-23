@@ -28,6 +28,8 @@ const URL_REWRITES = {
   '/gallery': '/gallery.html',
   '/contact': '/contact.html',
   '/blog': '/blog.html',
+  '/services/tile-installation': '/service-tile-installation.html',
+  '/services/kitchen-bathroom': '/service-kitchen-bathroom.html',
   '/services/showers': '/service-showers.html',
   '/services/bathrooms': '/service-bathrooms.html',
   '/services/kitchens': '/service-kitchens.html',

@@ -3,6 +3,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/services/tile-installation", "destination": "/service-tile-installation.html" },
+    { "source": "/services/kitchen-bathroom", "destination": "/service-kitchen-bathroom.html" },
     { "source": "/services/showers", "destination": "/service-showers.html" },
     { "source": "/services/bathrooms", "destination": "/service-bathrooms.html" },
     { "source": "/services/kitchens", "destination": "/service-kitchens.html" },
